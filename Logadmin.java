@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -30,8 +31,13 @@ Connection con;
             
         }
     }
+   private void icone() {
+        ImageIcon icon = new ImageIcon(getClass().getResource("/Vente/IMG/Blue Minimalist Letter D Logo_20240521_200331_0000.jpg"));
+        this.setIconImage(icon.getImage());
+    }
     public Logadmin() {
         initComponents();
+        icone();
     }
 
     /**
@@ -43,6 +49,7 @@ Connection con;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -50,23 +57,32 @@ Connection con;
         mdp = new javax.swing.JPasswordField();
         jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vente/IMG/Blue Minimalist Letter D Logo_20240521_200331_0000.jpg"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("FOUR A'S Center Market");
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(153, 255, 51));
         jLabel1.setFont(new java.awt.Font("Lucida Calligraphy", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 0, 204));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Bienvenue dans  votre Center Market");
         jLabel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, 520, 40));
 
         jLabel2.setFont(new java.awt.Font("Lucida Calligraphy", 0, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 0, 204));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Page de connexion Des Administrateurs");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, 580, 30));
 
         jLabel5.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(51, 0, 204));
         jLabel5.setText("Nom D'utilisateur");
         jLabel5.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 190, 50));
@@ -87,12 +103,14 @@ Connection con;
         getContentPane().add(mdp, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, 360, 40));
 
         jLabel3.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 204));
         jLabel3.setText("Mot De Passe");
         jLabel3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 170, 50));
 
         jButton1.setBackground(new java.awt.Color(153, 255, 153));
         jButton1.setFont(new java.awt.Font("Lucida Calligraphy", 0, 24)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(51, 0, 204));
         jButton1.setText("Connexion");
         jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -101,6 +119,12 @@ Connection con;
             }
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 270, 240, 50));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vente/IMG/Blue Minimalist Letter D Logo_20240521_200331_0000.jpg"))); // NOI18N
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 0, 510, 390));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vente/IMG/Blue Minimalist Letter D Logo_20240521_200331_0000.jpg"))); // NOI18N
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 510, 390));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -185,7 +209,10 @@ Connection con;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPasswordField mdp;
     private javax.swing.JTextField nom;
     // End of variables declaration//GEN-END:variables

@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.*;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -22,6 +23,7 @@ public class Login extends javax.swing.JFrame {
      
     public Login() {
         initComponents();
+        icone();
         
     }
     public void connect(){
@@ -35,6 +37,10 @@ public class Login extends javax.swing.JFrame {
             e.printStackTrace();
             
         }
+    }
+    private void icone() {
+        ImageIcon icon = new ImageIcon(getClass().getResource("/Vente/IMG/Blue Minimalist Letter D Logo_20240521_200331_0000.jpg"));
+        this.setIconImage(icon.getImage());
     }
 
     /**
@@ -57,34 +63,41 @@ public class Login extends javax.swing.JFrame {
         nom1 = new javax.swing.JTextField();
         tet = new javax.swing.JLabel();
         envoyer = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("FOUR A'S Center Market");
         setBackground(new java.awt.Color(0, 255, 0));
         setBounds(new java.awt.Rectangle(10, 10, 10, 10));
-        setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        setFont(new java.awt.Font("Lucida Calligraphy", 1, 18)); // NOI18N
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(153, 255, 51));
         jLabel1.setFont(new java.awt.Font("Lucida Calligraphy", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 0, 204));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Bienvenue dans  votre Center Market");
         jLabel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(47, 10, 520, 40));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 520, 40));
 
         jLabel2.setFont(new java.awt.Font("Lucida Calligraphy", 0, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 204));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Page de connexion");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, 520, 30));
 
         jLabel3.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(51, 0, 204));
         jLabel3.setText("Mot De Passe");
         jLabel3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 170, 50));
 
         jLabel5.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(51, 0, 204));
         jLabel5.setText("Nom D'utilisateur");
         jLabel5.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 190, 50));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 190, 50));
 
         nom.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
         nom.setForeground(new java.awt.Color(255, 0, 0));
@@ -94,15 +107,16 @@ public class Login extends javax.swing.JFrame {
                 nomActionPerformed(evt);
             }
         });
-        getContentPane().add(nom, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, 360, 40));
+        getContentPane().add(nom, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 360, 40));
 
         mdp.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
         mdp.setForeground(new java.awt.Color(255, 0, 0));
         mdp.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 255, 0), 3));
-        getContentPane().add(mdp, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, 360, 40));
+        getContentPane().add(mdp, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 360, 40));
 
         jButton1.setBackground(new java.awt.Color(153, 255, 153));
         jButton1.setFont(new java.awt.Font("Lucida Calligraphy", 0, 24)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(51, 0, 204));
         jButton1.setText("Connexion");
         jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -113,11 +127,12 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, 240, 50));
 
         entete.setBackground(new java.awt.Color(153, 255, 0));
-        entete.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
+        entete.setFont(new java.awt.Font("Lucida Calligraphy", 0, 14)); // NOI18N
+        entete.setForeground(new java.awt.Color(51, 0, 204));
         entete.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         entete.setText("Contactez L'Admin Pour Modifier votre Mot de Passe");
         entete.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(entete, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, 560, 40));
+        getContentPane().add(entete, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 490, 40));
 
         nom1.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
         nom1.setForeground(new java.awt.Color(255, 0, 0));
@@ -127,16 +142,18 @@ public class Login extends javax.swing.JFrame {
                 nom1ActionPerformed(evt);
             }
         });
-        getContentPane().add(nom1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 410, 360, 40));
+        getContentPane().add(nom1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 400, 360, 40));
 
         tet.setBackground(new java.awt.Color(153, 255, 0));
         tet.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
+        tet.setForeground(new java.awt.Color(51, 0, 204));
         tet.setText("Nom D'utilisateur");
         tet.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        getContentPane().add(tet, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 410, 190, 50));
+        getContentPane().add(tet, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, 190, 50));
 
         envoyer.setBackground(new java.awt.Color(153, 255, 153));
         envoyer.setFont(new java.awt.Font("Lucida Calligraphy", 0, 24)); // NOI18N
+        envoyer.setForeground(new java.awt.Color(51, 0, 204));
         envoyer.setText("Envoyer");
         envoyer.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         envoyer.addActionListener(new java.awt.event.ActionListener() {
@@ -144,9 +161,12 @@ public class Login extends javax.swing.JFrame {
                 envoyerActionPerformed(evt);
             }
         });
-        getContentPane().add(envoyer, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 470, 240, 40));
+        getContentPane().add(envoyer, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 460, 240, 40));
 
-        setSize(new java.awt.Dimension(624, 583));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vente/IMG/Blue Minimalist Letter D Logo_20240521_200331_0000.jpg"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, -20, 570, 560));
+
+        setSize(new java.awt.Dimension(579, 583));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -252,6 +272,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPasswordField mdp;
     private javax.swing.JTextField nom;

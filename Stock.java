@@ -4,6 +4,7 @@
  */
 package Vente;
 
+import java.net.URI;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -13,7 +14,12 @@ import java.text.SimpleDateFormat;
 import java.util.Random;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.net.http.HttpRequest.BodyPublishers;
+import java.net.http.HttpResponse.BodyHandlers;
+import javax.swing.ImageIcon;
 /**
  *
  * @author HACKER
@@ -35,6 +41,10 @@ public class Stock extends javax.swing.JFrame {
             e.printStackTrace();
             
         }
+    }
+      public void icone() {
+        ImageIcon icon = new ImageIcon(getClass().getResource("/Vente/IMG/Blue Minimalist Letter D Logo_20240521_200331_0000.jpg"));
+        this.setIconImage(icon.getImage());
     }
       public void stock(){
            String [] entete={"Article","Description","Quantite En Stock","Statut"};
@@ -79,6 +89,7 @@ public class Stock extends javax.swing.JFrame {
         initComponents();
         connect();
         stock();
+        icone();
     }
     
 
@@ -124,10 +135,14 @@ public class Stock extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("FOUR A'S Center Market");
+        setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
+        setForeground(new java.awt.Color(51, 0, 204));
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setForeground(new java.awt.Color(0, 0, 204));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Prix_Total");
         jLabel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 0), new java.awt.Color(255, 51, 0), new java.awt.Color(255, 255, 0), new java.awt.Color(153, 255, 0)));
@@ -148,47 +163,49 @@ public class Stock extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 880, 200));
 
         jLabel2.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 0, 204));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Bienvenue Dans Votre Center Market!!! Verifier Vos Stocks Ici");
         jLabel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 0), new java.awt.Color(255, 51, 0), new java.awt.Color(255, 255, 0), new java.awt.Color(153, 255, 0)));
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, 630, 40));
 
         jLabel3.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 204));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Passez Vos Commandes ici!!!");
         jLabel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 0), new java.awt.Color(255, 51, 0), new java.awt.Color(255, 255, 0), new java.awt.Color(153, 255, 0)));
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 280, 630, 40));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, 630, 40));
 
         jLabel4.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setForeground(new java.awt.Color(0, 0, 204));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Nom  Fournisseur");
         jLabel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 0), new java.awt.Color(255, 51, 0), new java.awt.Color(255, 255, 0), new java.awt.Color(153, 255, 0)));
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 190, 40));
 
         jLabel5.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setForeground(new java.awt.Color(51, 0, 204));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Paiement");
         jLabel5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 0), new java.awt.Color(255, 51, 0), new java.awt.Color(255, 255, 0), new java.awt.Color(153, 255, 0)));
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 540, 140, 40));
 
         jLabel6.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setForeground(new java.awt.Color(51, 0, 204));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Description");
         jLabel6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 0), new java.awt.Color(255, 51, 0), new java.awt.Color(255, 255, 0), new java.awt.Color(153, 255, 0)));
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 390, 140, 40));
 
         jLabel7.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setForeground(new java.awt.Color(0, 0, 204));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Prix_Unitaire");
         jLabel7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 0), new java.awt.Color(255, 51, 0), new java.awt.Color(255, 255, 0), new java.awt.Color(153, 255, 0)));
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 170, 40));
 
         jLabel8.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setForeground(new java.awt.Color(51, 0, 204));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Quantite");
         jLabel8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 0), new java.awt.Color(255, 51, 0), new java.awt.Color(255, 255, 0), new java.awt.Color(153, 255, 0)));
@@ -200,7 +217,7 @@ public class Stock extends javax.swing.JFrame {
         getContentPane().add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 440, 300, 40));
 
         jLabel9.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setForeground(new java.awt.Color(0, 0, 204));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Article");
         jLabel9.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 0), new java.awt.Color(255, 51, 0), new java.awt.Color(255, 255, 0), new java.awt.Color(153, 255, 0)));
@@ -229,21 +246,21 @@ public class Stock extends javax.swing.JFrame {
         getContentPane().add(prix_total, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 540, 300, 40));
 
         jLabel10.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setForeground(new java.awt.Color(51, 0, 204));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("Telephone");
         jLabel10.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 0), new java.awt.Color(255, 51, 0), new java.awt.Color(255, 255, 0), new java.awt.Color(153, 255, 0)));
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 340, 140, 40));
 
         jLabel11.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setForeground(new java.awt.Color(0, 0, 204));
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("Refference");
         jLabel11.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 0), new java.awt.Color(255, 51, 0), new java.awt.Color(255, 255, 0), new java.awt.Color(153, 255, 0)));
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, 170, 40));
 
         jLabel12.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setForeground(new java.awt.Color(51, 0, 204));
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("Date");
         jLabel12.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 0), new java.awt.Color(255, 51, 0), new java.awt.Color(255, 255, 0), new java.awt.Color(153, 255, 0)));
@@ -268,12 +285,12 @@ public class Stock extends javax.swing.JFrame {
         getContentPane().add(quantite, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 490, 300, 40));
 
         jButton1.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(102, 255, 0));
+        jButton1.setForeground(new java.awt.Color(51, 0, 204));
         jButton1.setText("Payer");
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 590, 300, 40));
 
         jButton2.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(102, 255, 0));
+        jButton2.setForeground(new java.awt.Color(0, 0, 204));
         jButton2.setText("Valider Commande");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -282,13 +299,12 @@ public class Stock extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 600, 300, 40));
 
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vente/IMG/00000002.jpg"))); // NOI18N
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vente/IMG/Blue Minimalist Letter D Logo_20240521_200331_0000.jpg"))); // NOI18N
         jLabel13.setText("jLabel13");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 310, 520, 350));
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 280, 520, 370));
 
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vente/IMG/00000002.jpg"))); // NOI18N
-        jLabel14.setText("jLabel13");
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 276, 530, 420));
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vente/IMG/Blue Minimalist Letter D Logo_20240521_200331_0000.jpg"))); // NOI18N
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 276, 530, 370));
 
         jButton3.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
         jButton3.setForeground(new java.awt.Color(102, 255, 0));
@@ -301,7 +317,7 @@ public class Stock extends javax.swing.JFrame {
         getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 590, 300, 40));
 
         jButton5.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(51, 255, 0));
+        jButton5.setForeground(new java.awt.Color(0, 0, 204));
         jButton5.setText("Acceuil");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -314,7 +330,7 @@ public class Stock extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private String mat(){
+    public String mat(){
       String code = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
      StringBuilder ma = new StringBuilder();
       Random sr = new Random();
@@ -360,6 +376,9 @@ public class Stock extends javax.swing.JFrame {
             pst.setString(9,na); 
             
             pst.executeUpdate();
+             // Envoi de la commande à l'API Laravel
+            api(ng, tel, ref, art, desc, pu, va, pt, na, da);
+
             JOptionPane.showMessageDialog(null, "Ajout Effectué avec succès");
             con.close();
            
@@ -369,7 +388,43 @@ public class Stock extends javax.swing.JFrame {
         e.printStackTrace();
     }
     }//GEN-LAST:event_jButton2ActionPerformed
+//methoe pour l'api permettant d'envoyer les données dans le site web
+    private void api(String nom, String telephone, String refference, String article, String description, String pu, String qte, String pt, String nature, String date) {
+    try {
+        // URL de votre API Laravel en local
+        String apiUrl = "http://localhost:8000/api/orders";
 
+        // Création de l'objet JSON de la commande
+        String json = String.format(
+            "{\"nom\":\"%s\", \"telephone\":\"%s\", \"refference\":\"%s\", \"article\":\"%s\", \"description\":\"%s\", \"pu\":\"%s\", \"qte\":\"%s\", \"pt\":\"%s\", \"nature\":\"%s\", \"date\":\"%s\"}",
+            nom, telephone, refference, article, description, pu, qte, pt, nature, date
+        );
+
+        // Configuration du client HTTP
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+            .uri(URI.create(apiUrl))
+            .header("Content-Type", "application/json")
+            .POST(HttpRequest.BodyPublishers.ofString(json))
+            .build();
+
+        // Envoi de la requête HTTP
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+        // Vérification de la réponse de l'API
+        if (response.statusCode() == 201) {
+            JOptionPane.showMessageDialog(null, "Commande envoyer avec succes");
+        } else {
+            JOptionPane.showMessageDialog(null, "Erreur lors de l'envoi de la commande à l'API Laravel:");
+           // JOptionPane.showMessagDialog(null,"Erreur lors de l'envoi de la commande à l'API Laravel:");
+            System.err.println("Erreur lors de l'envoi de la commande à l'API Laravel: " + response.body());
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}
+    
+    
     private void quantiteStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_quantiteStateChanged
          int pr = Integer.parseInt(prix_unitaire.getText());
 				int qt =(int) quantite.getValue();
@@ -442,7 +497,7 @@ public class Stock extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    public javax.swing.JTable jTable1;
     private javax.swing.JComboBox<String> nature;
     private javax.swing.JTextField nom;
     private javax.swing.JTextField prix_total;

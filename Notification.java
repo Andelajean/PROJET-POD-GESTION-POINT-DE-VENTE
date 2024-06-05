@@ -4,6 +4,8 @@
  */
 package Vente;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author HACKER
@@ -15,8 +17,12 @@ public class Notification extends javax.swing.JFrame {
      */
     public Notification() {
         initComponents();
+        icone();
     }
-
+private void icone() {
+        ImageIcon icon = new ImageIcon(getClass().getResource("/Vente/IMG/Blue Minimalist Letter D Logo_20240521_200331_0000.jpg"));
+        this.setIconImage(icon.getImage());
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -41,6 +47,8 @@ public class Notification extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\HACKER\\Documents\\NetBeansProjects\\point_de_vente\\src\\Vente\\IMG\\47.jpg")); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("FOUR A'S Center Market");
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\HACKER\\Documents\\NetBeansProjects\\point_de_vente\\src\\Vente\\IMG\\4.jpg")); // NOI18N
@@ -51,9 +59,8 @@ public class Notification extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 100, 100));
 
-        jButton4.setBackground(new java.awt.Color(153, 255, 51));
         jButton4.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 0, 0));
+        jButton4.setForeground(new java.awt.Color(51, 0, 204));
         jButton4.setText("Vendre");
         jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 255, 51), new java.awt.Color(255, 0, 0), new java.awt.Color(255, 255, 0), new java.awt.Color(255, 255, 0)));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -61,11 +68,10 @@ public class Notification extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 10, 180, -1));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 0, 120, -1));
 
-        jButton5.setBackground(new java.awt.Color(153, 255, 51));
         jButton5.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 0, 0));
+        jButton5.setForeground(new java.awt.Color(51, 0, 204));
         jButton5.setText("Ajouter des Produits");
         jButton5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 255, 51), new java.awt.Color(255, 0, 0), new java.awt.Color(255, 255, 0), new java.awt.Color(255, 255, 0)));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -73,20 +79,20 @@ public class Notification extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, 230, -1));
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, 220, -1));
 
         jLabel4.setFont(new java.awt.Font("Lucida Calligraphy", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setForeground(new java.awt.Color(51, 0, 153));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Bienvenue dans votre center Market !!!");
         jLabel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 255, 51), new java.awt.Color(255, 0, 51), new java.awt.Color(102, 255, 0), new java.awt.Color(255, 255, 0)));
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 530, 40));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 470, 40));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vente/IMG/47.jpg"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vente/IMG/Blue Minimalist Letter D Logo_20240521_200331_0000.jpg"))); // NOI18N
         jLabel3.setText("jLabel3");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 410));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 500, 410));
 
-        setSize(new java.awt.Dimension(621, 427));
+        setSize(new java.awt.Dimension(533, 463));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

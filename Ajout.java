@@ -10,6 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Random;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -17,7 +18,10 @@ import javax.swing.JOptionPane;
  * @author HACKER
  */
 public class Ajout extends javax.swing.JFrame {
-
+public void icone() {
+        ImageIcon icon = new ImageIcon(getClass().getResource("/Vente/IMG/Blue Minimalist Letter D Logo_20240521_200331_0000.jpg"));
+        this.setIconImage(icon.getImage());
+    }
     Connection con;
     PreparedStatement pst;
     ResultSet rs;
@@ -35,6 +39,7 @@ public class Ajout extends javax.swing.JFrame {
     }
     public Ajout() {
         initComponents();
+        icone();
     }
 
     /**
@@ -46,6 +51,9 @@ public class Ajout extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel11 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -61,79 +69,94 @@ public class Ajout extends javax.swing.JFrame {
         article = new javax.swing.JTextField();
         description = new javax.swing.JTextField();
         prix_unitaire = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
         prix_total = new javax.swing.JTextField();
         quantite = new javax.swing.JSpinner();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vente/IMG/47.jpg"))); // NOI18N
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vente/IMG/Blue Minimalist Letter D Logo_20240521_200331_0000.jpg"))); // NOI18N
+
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vente/IMG/Blue Minimalist Letter D Logo_20240521_200331_0000.jpg"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("FOUR A'S Center Market");
+        setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
+        setForeground(new java.awt.Color(0, 0, 153));
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 51, 153));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Bienvenue dans votre Center Market!! ajouter des Produits ici");
         jLabel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 204, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(153, 255, 0), new java.awt.Color(153, 255, 0)));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(299, 6, 660, 30));
 
         jLabel2.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setForeground(new java.awt.Color(0, 0, 153));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Refference");
         jLabel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 204, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(102, 255, 0), new java.awt.Color(102, 255, 0)));
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 400, 240, 40));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 240, 140, 40));
 
         jLabel3.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setForeground(new java.awt.Color(0, 0, 204));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Nom du Fournisseur");
         jLabel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 204, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(102, 255, 0), new java.awt.Color(102, 255, 0)));
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 240, 40));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 210, 40));
 
         jLabel4.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setForeground(new java.awt.Color(0, 0, 102));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Telephone");
         jLabel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 204, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(102, 255, 0), new java.awt.Color(102, 255, 0)));
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 240, 40));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 60, 140, 40));
 
         jLabel5.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setForeground(new java.awt.Color(0, 0, 153));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Article");
         jLabel5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 204, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(102, 255, 0), new java.awt.Color(102, 255, 0)));
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 240, 40));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 200, 40));
 
         jLabel6.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setForeground(new java.awt.Color(51, 0, 153));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Description");
         jLabel6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 204, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(102, 255, 0), new java.awt.Color(102, 255, 0)));
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 240, 40));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 120, 140, 40));
 
         jLabel7.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setForeground(new java.awt.Color(0, 0, 153));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Prix Unitaire");
         jLabel7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 204, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(102, 255, 0), new java.awt.Color(102, 255, 0)));
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 240, 40));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 200, 40));
 
         jLabel8.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Quantité");
         jLabel8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 204, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(102, 255, 0), new java.awt.Color(102, 255, 0)));
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 240, 40));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 180, 140, 40));
 
         jLabel9.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setForeground(new java.awt.Color(0, 0, 153));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setText("Prix Total");
+        jLabel9.setText("Nature Paiement");
         jLabel9.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 204, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(102, 255, 0), new java.awt.Color(102, 255, 0)));
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 240, 40));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 200, 40));
 
         refference.setEditable(false);
         refference.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
@@ -143,36 +166,52 @@ public class Ajout extends javax.swing.JFrame {
                 refferenceActionPerformed(evt);
             }
         });
-        getContentPane().add(refference, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 400, 480, 40));
+        getContentPane().add(refference, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 240, 410, 40));
 
         nom.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
         nom.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(153, 255, 0), new java.awt.Color(153, 255, 0)));
-        getContentPane().add(nom, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, 480, 40));
+        nom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nomActionPerformed(evt);
+            }
+        });
+        getContentPane().add(nom, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, 360, 40));
 
         telephone.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
         telephone.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(153, 255, 0), new java.awt.Color(153, 255, 0)));
-        getContentPane().add(telephone, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 100, 480, 40));
+        telephone.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                telephoneActionPerformed(evt);
+            }
+        });
+        getContentPane().add(telephone, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 60, 410, 40));
 
         article.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
         article.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(153, 255, 0), new java.awt.Color(153, 255, 0)));
-        getContentPane().add(article, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 480, 40));
+        getContentPane().add(article, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, 370, 40));
 
         description.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
         description.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(153, 255, 0), new java.awt.Color(153, 255, 0)));
-        getContentPane().add(description, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 200, 480, 40));
+        description.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                descriptionActionPerformed(evt);
+            }
+        });
+        getContentPane().add(description, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 120, 410, 40));
 
         prix_unitaire.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
         prix_unitaire.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(153, 255, 0), new java.awt.Color(153, 255, 0)));
-        getContentPane().add(prix_unitaire, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 250, 480, 40));
-
-        jTextField7.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
-        jTextField7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(153, 255, 0), new java.awt.Color(153, 255, 0)));
-        getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 250, 480, 40));
+        prix_unitaire.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                prix_unitaireActionPerformed(evt);
+            }
+        });
+        getContentPane().add(prix_unitaire, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, 370, 40));
 
         prix_total.setEditable(false);
         prix_total.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
         prix_total.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(153, 255, 0), new java.awt.Color(153, 255, 0)));
-        getContentPane().add(prix_total, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 350, 480, 40));
+        getContentPane().add(prix_total, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 230, 370, 40));
 
         quantite.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
         quantite.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -180,10 +219,11 @@ public class Ajout extends javax.swing.JFrame {
                 quantiteStateChanged(evt);
             }
         });
-        getContentPane().add(quantite, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 300, 480, 40));
+        getContentPane().add(quantite, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 180, 410, 40));
 
         jButton1.setBackground(new java.awt.Color(204, 255, 153));
         jButton1.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 0, 204));
         jButton1.setText("Ajouter");
         jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 204, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(153, 255, 0), new java.awt.Color(102, 255, 0)));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -191,10 +231,11 @@ public class Ajout extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 450, 200, 40));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 360, 200, 40));
 
         jButton2.setBackground(new java.awt.Color(204, 255, 153));
         jButton2.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(51, 0, 204));
         jButton2.setText("Acceuil");
         jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 204, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(153, 255, 0), new java.awt.Color(102, 255, 0)));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -206,6 +247,7 @@ public class Ajout extends javax.swing.JFrame {
 
         jButton3.setBackground(new java.awt.Color(204, 255, 153));
         jButton3.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(0, 0, 204));
         jButton3.setText("Annuler");
         jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 204, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(153, 255, 0), new java.awt.Color(102, 255, 0)));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -213,15 +255,55 @@ public class Ajout extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, 200, 40));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 360, 200, 40));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vente/IMG/47.jpg"))); // NOI18N
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 50, 620, 390));
+        jComboBox1.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Espece", "MTN MOMO", "ORANGE MONNEY", "CREDIT", "CHEQUE BANCIRE" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 282, 370, 40));
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vente/IMG/47.jpg"))); // NOI18N
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 620, 390));
+        jLabel12.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(0, 0, 153));
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel12.setText("Prix Total");
+        jLabel12.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 204, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(102, 255, 0), new java.awt.Color(102, 255, 0)));
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 200, 40));
 
-        setSize(new java.awt.Dimension(996, 531));
+        jLabel13.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel13.setText("Prix Total");
+        jLabel13.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 204, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(102, 255, 0), new java.awt.Color(102, 255, 0)));
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 200, 40));
+
+        jLabel14.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel14.setText("Prix Unitaire");
+        jLabel14.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 204, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(102, 255, 0), new java.awt.Color(102, 255, 0)));
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 200, 40));
+
+        jLabel15.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel15.setText("Prix Total");
+        jLabel15.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 204, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(102, 255, 0), new java.awt.Color(102, 255, 0)));
+        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 200, 40));
+
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vente/IMG/Blue Minimalist Letter D Logo_20240521_200331_0000.jpg"))); // NOI18N
+        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, 430));
+
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vente/IMG/Blue Minimalist Letter D Logo_20240521_200331_0000.jpg"))); // NOI18N
+        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 0, 320, 430));
+
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vente/IMG/Blue Minimalist Letter D Logo_20240521_200331_0000.jpg"))); // NOI18N
+        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 0, 510, 430));
+
+        setSize(new java.awt.Dimension(1206, 531));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -249,7 +331,7 @@ public class Ajout extends javax.swing.JFrame {
         connect();
          Statement st = con.createStatement();
         rs= st.executeQuery(req);
-        pst=con.prepareStatement("INSERT INTO vente(nomclt,telct,numf,article,description,pu,qte,pt,nature_op,stock) VALUES (?,?,?,?,?,?,?,?,?,?)");
+        pst=con.prepareStatement("INSERT INTO vente(nomclt,telct,numf,article,description,pu,qte,pt,nature_op,stock,paiement) VALUES (?,?,?,?,?,?,?,?,?,?,?)");
             pst.setString(1,ng);
             pst.setString(2,tel);
             pst.setString(3,ref);
@@ -264,9 +346,11 @@ public class Ajout extends javax.swing.JFrame {
             int stock = de+qte;
             String str = String.valueOf(stock); 
             pst.setString(10,str);
+            pst.setString(11,jComboBox1.getSelectedItem().toString());
         }
              else{
                  pst.setString(10, va);
+                 pst.setString(11,jComboBox1.getSelectedItem().toString());
              }
             
             pst.executeUpdate();
@@ -318,6 +402,26 @@ public class Ajout extends javax.swing.JFrame {
 				prix_total.setText(String.valueOf(to));
     }//GEN-LAST:event_quantiteStateChanged
 
+    private void nomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nomActionPerformed
+
+    private void telephoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telephoneActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_telephoneActionPerformed
+
+    private void descriptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descriptionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_descriptionActionPerformed
+
+    private void prix_unitaireActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prix_unitaireActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_prix_unitaireActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -354,14 +458,23 @@ public class Ajout extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField article;
-    private javax.swing.JTextField description;
-    private javax.swing.JButton jButton1;
+    public javax.swing.JTextField article;
+    public javax.swing.JTextField description;
+    public javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    public javax.swing.JButton jButton3;
+    public javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -370,12 +483,11 @@ public class Ajout extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField nom;
-    private javax.swing.JTextField prix_total;
-    private javax.swing.JTextField prix_unitaire;
-    private javax.swing.JSpinner quantite;
-    private javax.swing.JTextField refference;
-    private javax.swing.JTextField telephone;
+    public javax.swing.JTextField nom;
+    public javax.swing.JTextField prix_total;
+    public javax.swing.JTextField prix_unitaire;
+    public javax.swing.JSpinner quantite;
+    public javax.swing.JTextField refference;
+    public javax.swing.JTextField telephone;
     // End of variables declaration//GEN-END:variables
 }

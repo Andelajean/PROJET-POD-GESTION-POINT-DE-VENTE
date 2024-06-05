@@ -17,6 +17,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -28,7 +29,7 @@ public class Inventaire extends javax.swing.JFrame {
 
     public void general(){
         connect();
-        String [] entete={"Nom","Telephone","Article","Description","Refference","P.U","QTE","PT","Nature_op","Stock","Date"};
+        String [] entete={"Nom","Telephone","Article","Description","Refference","P.U","QTE","PT","Nature_op","Stock","Paiement","Date"};
        String [] montere = new String[13];
        DefaultTableModel model = new DefaultTableModel(null,entete);
        String req = "SELECT *  FROM vente";
@@ -165,9 +166,14 @@ public class Inventaire extends javax.swing.JFrame {
             }
         }
     }
+     private void icone() {
+        ImageIcon icon = new ImageIcon(getClass().getResource("/Vente/IMG/Blue Minimalist Letter D Logo_20240521_200331_0000.jpg"));
+        this.setIconImage(icon.getImage());
+    }
    
     public Inventaire() {
         initComponents();
+        icone();
     }
 
     /**
@@ -194,15 +200,19 @@ public class Inventaire extends javax.swing.JFrame {
         natur = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("FOUR A'S Center Market");
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 0, 204));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Quel invetaire Souhaitez Vous Faire??");
         jLabel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(255, 255, 0), new java.awt.Color(102, 255, 0)));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 380, 40));
 
         jLabel2.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 0, 204));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Bienvenue Dans Votre Center Market!! Faites vos Inventaires Ici!!");
         jLabel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(255, 255, 0), new java.awt.Color(102, 255, 0)));
@@ -226,6 +236,7 @@ public class Inventaire extends javax.swing.JFrame {
 
         jButton2.setBackground(new java.awt.Color(204, 255, 153));
         jButton2.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(51, 0, 204));
         jButton2.setText("Acceuil");
         jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 204, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(255, 204, 0), new java.awt.Color(102, 255, 0)));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -237,6 +248,7 @@ public class Inventaire extends javax.swing.JFrame {
 
         jButton3.setBackground(new java.awt.Color(204, 255, 153));
         jButton3.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(51, 0, 204));
         jButton3.setText("Valider");
         jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 204, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(255, 204, 0), new java.awt.Color(102, 255, 0)));
         jButton3.addActionListener(new java.awt.event.ActionListener() {

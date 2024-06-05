@@ -4,6 +4,7 @@
  */
 package Vente;
 
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
@@ -13,7 +14,10 @@ import javax.swing.JProgressBar;
  * @author HACKER
  */
 public class Loard extends javax.swing.JFrame {
-
+private void icone() {
+        ImageIcon icon = new ImageIcon(getClass().getResource("/Vente/IMG/Blue Minimalist Letter D Logo_20240521_200331_0000.jpg"));
+        this.setIconImage(icon.getImage());
+    }
   
    public static void main(String[] args) {
 		     int x=0;
@@ -35,6 +39,7 @@ public class Loard extends javax.swing.JFrame {
 	}
     public Loard() {
         initComponents();
+        icone();
     }
 
     /**
@@ -51,6 +56,7 @@ public class Loard extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jProgressBar1.setForeground(new java.awt.Color(255, 153, 0));
