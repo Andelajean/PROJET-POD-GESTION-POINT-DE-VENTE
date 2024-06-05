@@ -12,14 +12,19 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.*;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 public class Adminbloc extends javax.swing.JFrame {
 
-   
+   private void icone() {
+        ImageIcon icon = new ImageIcon(getClass().getResource("/Vente/IMG/Blue Minimalist Letter D Logo_20240521_200331_0000.jpg"));
+        this.setIconImage(icon.getImage());
+    }
     public Adminbloc() {
         initComponents();
         tableau();
+        icone();
     }
      Connection con;
     PreparedStatement pst;
@@ -56,6 +61,8 @@ public class Adminbloc extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         role = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
         note = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -65,13 +72,18 @@ public class Adminbloc extends javax.swing.JFrame {
         mp = new javax.swing.JPasswordField();
         jLabel9 = new javax.swing.JLabel();
         nom1 = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("FOUR A'S Center Market");
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         notification.setBackground(new java.awt.Color(153, 255, 153));
         notification.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
+        notification.setForeground(new java.awt.Color(51, 0, 204));
         notification.setText("Inventaire");
         notification.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         notification.setIconTextGap(0);
@@ -84,6 +96,7 @@ public class Adminbloc extends javax.swing.JFrame {
 
         jButton2.setBackground(new java.awt.Color(153, 255, 153));
         jButton2.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(51, 0, 204));
         jButton2.setText("Acceuil");
         jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -109,6 +122,7 @@ public class Adminbloc extends javax.swing.JFrame {
 
         jLabel1.setBackground(new java.awt.Color(153, 255, 51));
         jLabel1.setFont(new java.awt.Font("Lucida Calligraphy", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 0, 204));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Mot De Passe");
         jLabel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -116,6 +130,7 @@ public class Adminbloc extends javax.swing.JFrame {
 
         jLabel2.setBackground(new java.awt.Color(153, 255, 51));
         jLabel2.setFont(new java.awt.Font("Lucida Calligraphy", 0, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 0, 204));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Creez Un Compte ici");
         jLabel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -123,6 +138,7 @@ public class Adminbloc extends javax.swing.JFrame {
 
         jLabel3.setBackground(new java.awt.Color(153, 255, 51));
         jLabel3.setFont(new java.awt.Font("Lucida Calligraphy", 0, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(51, 0, 204));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Comfirmer le MDP");
         jLabel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -130,6 +146,7 @@ public class Adminbloc extends javax.swing.JFrame {
 
         jLabel4.setBackground(new java.awt.Color(153, 255, 51));
         jLabel4.setFont(new java.awt.Font("Lucida Calligraphy", 0, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(51, 0, 204));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Role");
         jLabel4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -137,6 +154,7 @@ public class Adminbloc extends javax.swing.JFrame {
 
         jButton3.setBackground(new java.awt.Color(153, 255, 153));
         jButton3.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(0, 0, 204));
         jButton3.setText("Creer un Compte");
         jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -163,6 +181,7 @@ public class Adminbloc extends javax.swing.JFrame {
 
         jLabel5.setBackground(new java.awt.Color(153, 255, 51));
         jLabel5.setFont(new java.awt.Font("Lucida Calligraphy", 0, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(51, 0, 204));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Nom D'Utilisateur");
         jLabel5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -181,6 +200,12 @@ public class Adminbloc extends javax.swing.JFrame {
         jLabel7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 260, 30));
 
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vente/IMG/Blue Minimalist Letter D Logo_20240521_200331_0000.jpg"))); // NOI18N
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -60, 460, 410));
+
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vente/IMG/Blue Minimalist Letter D Logo_20240521_200331_0000.jpg"))); // NOI18N
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, -60, 400, 420));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 710, 290));
 
         note.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 255, 0), new java.awt.Color(255, 0, 0), new java.awt.Color(255, 255, 0), new java.awt.Color(255, 255, 0)));
@@ -188,6 +213,7 @@ public class Adminbloc extends javax.swing.JFrame {
 
         jLabel6.setBackground(new java.awt.Color(153, 255, 51));
         jLabel6.setFont(new java.awt.Font("Lucida Calligraphy", 0, 24)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(51, 0, 204));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Panel de modifications et de mises à jours");
         jLabel6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -215,6 +241,7 @@ public class Adminbloc extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(153, 255, 153));
         jButton1.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(51, 0, 204));
         jButton1.setText("Modifier");
         jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -226,6 +253,7 @@ public class Adminbloc extends javax.swing.JFrame {
 
         jLabel8.setBackground(new java.awt.Color(153, 255, 51));
         jLabel8.setFont(new java.awt.Font("Lucida Calligraphy", 0, 24)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(51, 0, 204));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("User Name");
         jLabel8.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -238,6 +266,7 @@ public class Adminbloc extends javax.swing.JFrame {
 
         jLabel9.setBackground(new java.awt.Color(153, 255, 51));
         jLabel9.setFont(new java.awt.Font("Lucida Calligraphy", 0, 24)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 0, 204));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Nouveau MDP");
         jLabel9.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -248,10 +277,17 @@ public class Adminbloc extends javax.swing.JFrame {
         nom1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         note.add(nom1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, 380, 30));
 
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vente/IMG/Blue Minimalist Letter D Logo_20240521_200331_0000.jpg"))); // NOI18N
+        note.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 190, 400, 380));
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vente/IMG/Blue Minimalist Letter D Logo_20240521_200331_0000.jpg"))); // NOI18N
+        note.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 190, 400, 380));
+
         getContentPane().add(note, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 380, 770, 580));
 
         jButton4.setBackground(new java.awt.Color(153, 255, 153));
         jButton4.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(51, 0, 204));
         jButton4.setText("Voir Stock");
         jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -429,6 +465,10 @@ Adminbloc.super.dispose();
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
